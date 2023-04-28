@@ -112,5 +112,5 @@ CommonDataTable(
     onExportPDF: (file) async {
       await launchUrl(Uri.file(file.path));
     },
-    )
+)
 ```
