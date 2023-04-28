@@ -6,3 +6,6 @@
 * Added Shortcuts
 * Added Sorting
 * Bug fixed
+
+## 1.0.1
+* Bug Fixed

@@ -660,8 +660,14 @@ class _CommonDataTableState extends State<CommonDataTable> {
                       children: [
                         Row(
                           children: [
+                            Text(
+                              "Show  ",
+                              style: TextStyle(
+                                fontSize: 20,
+                              ),
+                            ),
                             SizedBox(
-                              width: 90,
+                              width: 100,
                               height: 40,
                               child: DropdownButtonFormField<int>(
                                 decoration: InputDecoration(
@@ -694,12 +700,18 @@ class _CommonDataTableState extends State<CommonDataTable> {
                                 ],
                               ),
                             ),
+                            Text(
+                              "  entries",
+                              style: TextStyle(
+                                fontSize: 20,
+                              ),
+                            ),
                           ],
                         ),
                         Spacer(),
                         if (widget.isSearchAble) ...[
                           Text(
-                            "Filter:  ",
+                            "Search: ",
                             style: TextStyle(
                               fontSize: 20,
                             ),
@@ -1032,7 +1044,7 @@ class _CommonDataTableState extends State<CommonDataTable> {
                       Row(
                         children: [
                           Text(
-                            "Showing ${_from + 1} to ${_from + _limit} of ${_data.length} entries",
+                            "Showing ${_from + 1} to ${(_from + _limit) <= _data.length ? (_from + _limit) : _data.length} of ${_data.length} entries",
                           ),
                           if (_sorting >= 0)
                             Text(
