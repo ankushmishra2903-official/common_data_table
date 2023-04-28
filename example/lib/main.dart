@@ -1,5 +1,6 @@
 import 'package:common_data_table/common_data_table.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -38,6 +39,14 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: CommonDataTable(
         isSearchAble: true,
+        sortColumn: [1],
+        title: "Testing Table",
+        titleBgColor: Colors.black,
+        titleStyle: TextStyle(
+          fontSize: 16,
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
+        ),
         heading: [
           'S.NO',
           'Title',
@@ -59,7 +68,13 @@ class _MyHomePageState extends State<MyHomePage> {
         tableActionButtons: [
           TableActionButton(
             child: Text("Add Highlight"),
-            onTap: () {},
+            onTap: () {
+              print("add");
+            },
+            shortcuts: SingleActivator(
+              LogicalKeyboardKey.keyA,
+              control: true,
+            ),
             icon: Icon(
               FontAwesomeIcons.addressBook,
               size: 20,
@@ -67,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
           )
         ],
         data: [
-          for (int i = 1; i <= 50; i++) ...[
+          for (int i = 1; i <= 200; i++) ...[
             [
               '$i.',
               'Title of $i',
