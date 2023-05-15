@@ -50,6 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
         heading: [
           'S.NO',
           'Title',
+          'Subtitle',
         ],
         rowActionButtons: [
           RowActionButton(
@@ -82,10 +83,11 @@ class _MyHomePageState extends State<MyHomePage> {
           )
         ],
         data: [
-          for (int i = 1; i <= 200; i++) ...[
+          for (int i = 1; i <= 10; i++) ...[
             [
               '$i.',
               'Title of $i',
+              'Subtitle of title of $i',
             ],
           ]
         ],

@@ -9,3 +9,6 @@
 
 ## 1.0.1
 * Bug Fixed
+
+## 1.0.5
+* Bug Fixed on Searching

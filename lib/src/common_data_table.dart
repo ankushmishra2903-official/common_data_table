@@ -743,7 +743,9 @@ class _CommonDataTableState extends State<CommonDataTable> {
                                       if (data
                                           .toLowerCase()
                                           .contains(value.toLowerCase())) {
-                                        _data.add(row);
+                                        if (!_data.contains(row)) {
+                                          _data.add(row);
+                                        }
                                       }
                                     }
                                   }

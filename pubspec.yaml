@@ -1,12 +1,12 @@
 name: common_data_table
 description: A Common Data Table same like data table with search filter, set limits, export excel / pdf and also edit, delete option and add more actions
-version: 1.0.1
+version: 1.0.5
 homepage: "https://github.com/ankushmishra2903-official/common_data_table"
 repository: "https://github.com/ankushmishra2903-official/common_data_table"
 issue_tracker: "https://github.com/ankushmishra2903-official/common_data_table/issues"
 
 environment:
-  sdk: '>=2.19.6 <3.0.0'
+  sdk: '>=2.19.6 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
