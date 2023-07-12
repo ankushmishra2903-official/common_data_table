@@ -44,6 +44,7 @@ class CommonDataTable extends StatefulWidget {
   /// row then as action will you perform.
   /// if this will null then that iconButton will not show.
   final Function(int index)? onEdit, onDelete;
+  final Decoration? Function(int index)? rowDecoration;
 
   /// [onExportExcel] and [onExportPDF] are show in top right corner.
   /// when you click on [onExportExcel] and [onExportPDF] it will return you
@@ -93,6 +94,7 @@ class CommonDataTable extends StatefulWidget {
     this.titleBgColor,
     this.titleStyle,
     this.margin = 20,
+    this.rowDecoration,
   }) : super(key: key);
 
   @override
@@ -643,15 +645,10 @@ class _CommonDataTableState extends State<CommonDataTable> {
                 ),
                 decoration: BoxDecoration(
                   border: Border.all(),
-                  borderRadius: widget.title != null ||
-                          widget.onExportExcel != null ||
-                          widget.onExportPDF != null ||
-                          widget.tableActionButtons.isNotEmpty
-                      ? BorderRadius.only(
-                          bottomLeft: Radius.circular(10),
-                          bottomRight: Radius.circular(10),
-                        )
-                      : BorderRadius.circular(10),
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(10),
+                    bottomRight: Radius.circular(10),
+                  ),
                 ),
                 padding: EdgeInsets.all(10),
                 child: Column(
@@ -916,6 +913,9 @@ class _CommonDataTableState extends State<CommonDataTable> {
                                             : _data.length);
                                     j++) ...[
                                   TableRow(
+                                    decoration: widget.rowDecoration != null
+                                        ? widget.rowDecoration!(j)
+                                        : null,
                                     children: [
                                       for (int i = 0;
                                           i < _data[j].length;

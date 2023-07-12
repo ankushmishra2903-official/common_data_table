@@ -12,3 +12,6 @@
 
 ## 1.0.5
 * Bug Fixed on Searching
+
+## 1.0.6
+* Add Decoration for row with conditions

@@ -82,8 +82,16 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           )
         ],
+        rowDecoration: (index) {
+          if (index.isOdd) {
+            return BoxDecoration(
+              color: Colors.red,
+            );
+          }
+          return null;
+        },
         data: [
-          for (int i = 1; i <= 10; i++) ...[
+          for (int i = 1; i <= 100; i++) ...[
             [
               '$i.',
               'Title of $i',
