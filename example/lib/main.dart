@@ -82,11 +82,9 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           )
         ],
-        rowDecoration: (index) {
+        rowBGColor: (index) {
           if (index.isOdd) {
-            return BoxDecoration(
-              color: Colors.red,
-            );
+            return Colors.red;
           }
           return null;
         },

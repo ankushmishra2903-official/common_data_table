@@ -1,6 +1,6 @@
 name: common_data_table
 description: A Common Data Table same like data table with search filter, set limits, export excel / pdf and also edit, delete option and add more actions
-version: 1.0.6
+version: 1.0.7
 homepage: "https://github.com/ankushmishra2903-official/common_data_table"
 repository: "https://github.com/ankushmishra2903-official/common_data_table"
 issue_tracker: "https://github.com/ankushmishra2903-official/common_data_table/issues"

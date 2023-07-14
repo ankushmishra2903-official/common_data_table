@@ -15,3 +15,7 @@
 
 ## 1.0.6
 * Add Decoration for row with conditions
+
+## 1.0.7
+* change rowDecoration to rowBGColor
+* Able to view in Mobile as ExpansionTile
